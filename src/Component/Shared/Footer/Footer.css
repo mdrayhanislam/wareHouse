@@ -1,0 +1,14 @@
+.footer{
+    background-color: black;
+    color: white;
+    padding: 1px;
+}
+.d-flex img{
+    margin: 10px;
+    border-radius: 5px;
+}
+.d-flex img:hover{
+    background-color: beige;
+    border-radius: 10px;
+    padding: 5px;
+}
