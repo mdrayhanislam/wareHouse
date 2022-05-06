@@ -1,0 +1,65 @@
+[
+    {
+        "id":"1",
+    "image":"https://i.ibb.co/dBQBsxy/HEALTH-BENEFITS-OF-RED-GRAM-DAL.png",
+    "name":"Red Gram",
+    "price":"100",
+    "quantity":"200",
+    "supplierName":"Taijul",
+    "description":"Lentils are one of the main food grains of Bangladesh.  Its English name is Red lentil.  These pulses are boiled in water and cooked with oil and spices and rice is mixed with cooked pulses.  In view of the need for meat in the human body, lentils are said to be meat for the poor.  Lentils are light red in color."
+    },
+    {
+        "id":"2",
+    "image":"https://i.ibb.co/0C2CQn8/png-clipart-kabsa-gunny-sack-rice-bag-bags-food-bags.png",
+    "name":"Rice",
+    "price":"50",
+    "quantity":"400",
+    "supplierName":"Nipon",
+    "description":"Rice is the grain part of rice.  Rice is produced from paddy.  Rice is cooked by boiling rice in water which is the staple food of many countries of the world including India, Bangladesh and Pakistan.  Percentage has been estimated using the US recommendation for adults."
+    },
+    {
+        "id":"3",
+    "image":"https://i.ibb.co/93K281y/cookingoil-86050615-1000.png",
+    "name":"Oil",
+    "price":"200",
+    "quantity":"600",
+    "supplierName":"Jibon",
+    "description":"An oil is any nonpolar chemical substance that is composed primarily of hydrocarbons and is both hydrophobic and lipophilic. Oils are usually flammable and surface active. Most oils are unsaturated lipids that are liquid at room temperature."
+    },
+    {
+        "id":"4",
+    "image":"https://i.ibb.co/d68FWH4/teer-semolina-suji-500-gm.png",
+    "name":"Semolina",
+    "price":"70",
+    "quantity":"100",
+    "supplierName":"Khokon",
+    "description":"Almost all of us like to eat semolina pudding for breakfast.  At the same time we are familiar with the taste of all other types of food made with semolina.  In fact, whether semolina is acceptable for breakfast or not, on the one hand, semolina is rich in many nutrients and on the other hand, semolina has many health benefits."
+    },
+    {
+        "id":"5",
+    "image":"https://i.ibb.co/CsyfydQ/images.png",
+    "name":"Flour",
+    "price":"40",
+    "quantity":"120",
+    "supplierName":"Sumon",
+    "description":"Atta/Ata or Chakki Atta is a wholemeal wheat flour, originating from the Indian subcontinent, used to make flatbreads such as chapati, roti, naan, paratha and puri. It is the most widespread flour in the Indian subcontinent."
+    },
+    {
+        "id":"6",
+    "image":"https://i.ibb.co/yfhP16m/aci-pure-salt-1-kg.png",
+    "name":"Salt",
+    "price":"30",
+    "quantity":"230",
+    "supplierName":"Dalim",
+    "description":"Salt is a mineral composed primarily of sodium chloride, a chemical compound belonging to the larger class of salts; salt in the form of a natural crystalline mineral is known as rock salt or halite. Salt is present in vast quantities in seawater."
+    },
+    {
+        "id":"7",
+    "image":"https://i.ibb.co/M1crmdT/depositphotos-2231740-stock-photo-sack-of-sugar.png",
+    "name":"Sugar",
+    "price":"80",
+    "quantity":"300",
+    "supplierName":"Rayhan",
+    "description":"Sugar is a sweet substance made from the juice of a tree or fruit.  In India, sugar is usually made from sugarcane or sugarcane juice.  Beet and maple are two other major forest sources of sugar.  The chemical name of sugar is sucrose and the chemical symbol is C12H22O11"
+    }
+    ]

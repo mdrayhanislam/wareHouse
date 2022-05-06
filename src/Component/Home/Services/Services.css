@@ -1,0 +1,27 @@
+.services-title{
+    text-align: center;
+    color: blue;
+}
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* border: 1px solid rebeccapurple; */
+    grid-gap: 20px;
+    /* width: 75%; */
+    /* justify-content:center ; */
+    /* margin-left:12%; */
+}
+
+/*make services responsive*/
+@media only screen and (max-width: 600px) {
+    .services-container{
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+  }
+@media only screen and (min-width: 600px) and (max-width :992px) {
+    .services-container{
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+  }
