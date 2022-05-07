@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const ProductUpdate = () => {
     const {serviceId} = useParams();
@@ -8,9 +8,9 @@ const ProductUpdate = () => {
 
          <p className='me-5 mt-2'>Product Id: {serviceId} </p>
          
-
+         <Link to="/update">
            <button type="button" className="btn btn-primary "> Product Update </button>
-            
+            </Link>
         </div>
     );
 };
