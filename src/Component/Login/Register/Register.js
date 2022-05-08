@@ -13,15 +13,18 @@ const Register = () => {
         user,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword(auth);
-      
+      ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
+      const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
     const navigate =useNavigate();
 
     const navigateLogin = () =>{
          navigate('/login')
     }
-
+    if(user){
+        console.log('user', user);
+       navigate('/home');
+    }
     const handleRegister = async (event) =>{
         event.preventDefault();
         const name = event.target.name.value;
