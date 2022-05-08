@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
-import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Button, Form, Toast } from 'react-bootstrap';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
@@ -12,14 +12,17 @@ const Login = () => {
 
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
-
+    
     const [
         signInWithEmailAndPassword,
         user,
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+    
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
+  
     if(user){
         navigate('/home');
        navigate(from, {replace: true});
@@ -33,6 +36,18 @@ const Login = () => {
     }
     const navigateRegister = event => {
         navigate('/register')
+    }
+
+    const resetPassword = async() => {
+        const email = emailRef.current.value;
+        if(email){
+            await sendPasswordResetEmail(email);
+            Toast('Sent email');
+        }
+        else{
+            Toast('Please enter your email address')
+        }
+       
     }
     return (
         <div className='container w-50 mx-auto'>
@@ -54,7 +69,7 @@ const Login = () => {
             </Button>
         </Form>
         <p>If you are the first to visit our website, <Link to="/register" className='text-danger pe-auto text-decoration-none' onClick={navigateRegister}> Please Register </Link></p>
-        <p>Forget Password <button className='text-primary pe-auto text-decoration-none btn btn-link' > Please Reset Password </button></p>
+        <p>Forget Password <button className='text-primary pe-auto text-decoration-none btn btn-link' onClick={resetPassword}> Please Reset Password </button></p>
         <SocialLogin></SocialLogin>
          
     </div>
