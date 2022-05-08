@@ -9,7 +9,7 @@ import NotFound from './Component/NotFound/NotFound';
 import Register from './Component/Login/Register/Register';
 import ProductUpdate from './Component/ProductUpdate/ProductUpdate';
 import RequireAuth from './Component/Login/RequireAuth/RequireAuth';
-import Update from './Component/Update/Update';
+import AddService from './Component/AddService/AddService';
 
 
 function App() {
@@ -22,12 +22,21 @@ function App() {
       <Route path="/home" element={<Home></Home>}></Route>
        <Route path="/login" element={<Login></Login>}></Route>
        <Route path="/register" element={<Register></Register>}></Route>
-       <Route path='/service/:serviceId' element={<ProductUpdate></ProductUpdate>}></Route>
-       <Route path='/update' element={
+
+       {/* <Route path='/service/:serviceId' element={<ProductUpdate></ProductUpdate>}></Route> */}
+
+       <Route path='/service/:serviceId' element={
          <RequireAuth>
-           <Update></Update>
+           <ProductUpdate></ProductUpdate>
          </RequireAuth>
        }></Route>
+
+       <Route path='/addservice' element={
+         <RequireAuth>
+           <AddService></AddService>
+         </RequireAuth>
+       }></Route>
+
        <Route path="/*" element={<NotFound></NotFound>}></Route>
      </Routes>
       <Footer></Footer>
