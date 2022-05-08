@@ -5,6 +5,7 @@ import auth from '../../../firebase.init'
 import './Register.css'
 import SocialLogin from '../SocialLogin/SocialLogin';
 import { updateProfile } from 'firebase/auth';
+import Loading from '../../Shared/Loading/Loading';
 const Register = () => {
     const [agree, setAgree] = useState(false)
 
@@ -21,6 +22,11 @@ const Register = () => {
     const navigateLogin = () =>{
          navigate('/login')
     }
+
+    if(loading){
+        return <Loading></Loading>
+       }
+
     if(user){
         console.log('user', user);
        navigate('/home');
