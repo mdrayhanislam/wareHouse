@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init'
 import './Register.css'
 import SocialLogin from '../SocialLogin/SocialLogin';
+import { updateProfile } from 'firebase/auth';
 const Register = () => {
+    const [agree, setAgree] = useState(false)
 
     const [
         createUserWithEmailAndPassword,
@@ -25,7 +27,14 @@ const Register = () => {
         const name = event.target.name.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
-        createUserWithEmailAndPassword(email, password);
+        const agree = event.target.terms.checked;
+        if(agree){
+            await createUserWithEmailAndPassword(email, password);
+            navigate('/home');
+            }
+            await updateProfile ({displayName: name})
+            alert('Updated profole');
+            navigate('/home');
     }
     return (
         <div className='register-form'>
@@ -35,13 +44,15 @@ const Register = () => {
             <input type="email" name='email' id='' placeholder='Your Email' required/>
             <input type="password" name='password' id='' placeholder='Your Password' required/>
             <div style={{textAlign:'center'}}>
-            <input type="checkbox" name="terms" id="terms" />
-            <lebel className={'ps-1 text-danger'} htmlFor="terms" >Accept Terms and Conditions</lebel>
+            <input onClick={() =>setAgree(!agree)} type="checkbox" name="terms" id="terms" />
+            {/* <lebel className={agree ? 'ps-2 text-primary' : 'ps-1 text-danger'} htmlFor="terms" >Accept Terms and Conditions</lebel> */}
+            <lebel className={`ps-2 ${agree ? '' : 'text-danger'}`} htmlFor="terms" >Accept Terms and Conditions</lebel>
+          
             </div>
             
            
             <input 
-           
+            
             className='w-50 mx-auto-btn submit-custom mt-3'
              type="submit" value="Register" />
         </form>
