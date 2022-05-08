@@ -4,8 +4,9 @@ import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-fireb
 import auth from '../../../firebase.init'
 import './Register.css'
 import SocialLogin from '../SocialLogin/SocialLogin';
-import { updateProfile } from 'firebase/auth';
+
 import Loading from '../../Shared/Loading/Loading';
+
 const Register = () => {
     const [agree, setAgree] = useState(false)
 
@@ -61,7 +62,7 @@ const Register = () => {
             
            
             <input 
-            
+             disabled={!agree}
             className='w-50 mx-auto-btn submit-custom mt-3'
              type="submit" value="Register" />
         </form>
