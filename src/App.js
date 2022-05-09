@@ -10,6 +10,9 @@ import Register from './Component/Login/Register/Register';
 import ProductUpdate from './Component/ProductUpdate/ProductUpdate';
 import RequireAuth from './Component/Login/RequireAuth/RequireAuth';
 import AddService from './Component/AddService/AddService';
+import ManageItems from './Component/ManageItems/ManageItems';
+import Blogs from './Component/Blogs/Blogs';
+
 
 
 function App() {
@@ -22,6 +25,7 @@ function App() {
       <Route path="/home" element={<Home></Home>}></Route>
        <Route path="/login" element={<Login></Login>}></Route>
        <Route path="/register" element={<Register></Register>}></Route>
+       <Route path='/blogs' element={<Blogs></Blogs>}></Route>
 
        {/* <Route path='/service/:serviceId' element={<ProductUpdate></ProductUpdate>}></Route> */}
 
@@ -34,6 +38,12 @@ function App() {
        <Route path='/addservice' element={
          <RequireAuth>
            <AddService></AddService>
+         </RequireAuth>
+       }></Route>
+
+       <Route path='/manageitems' element={
+         <RequireAuth>
+           <ManageItems></ManageItems>
          </RequireAuth>
        }></Route>
 

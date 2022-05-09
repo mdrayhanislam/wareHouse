@@ -2,6 +2,16 @@
     text-align: center;
     color: blue;
 }
+.pagination button{
+    margin-right: 10px;
+    background-color: white;
+    border-radius: 4px;
+    border: 2px solid rgb(60, 0, 255) ;
+}
+.pagination .selected{
+    background-color: #8A2BE2;
+    color: white;
+}
 .services-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
