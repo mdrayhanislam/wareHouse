@@ -5,6 +5,10 @@ github Server Side link: https://github.com/ProgrammingHeroWC4/warehouse-managem
  
  Project-live link : https://assignment-11-af770.web.app/
 
+
+***A description of what I am doing on the website
+
+
 . I create warehouse website
 
 . I add two additional sections to the home page and the four sections mentioned above.  Add something different and unique to make my website stand out from the rest.  And make them relevant on my website.

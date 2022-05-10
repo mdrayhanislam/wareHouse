@@ -30,6 +30,7 @@ const ProductUpdate = () => {
             'content-type': 'application/json'
         },
         body: JSON.stringify(updatedUser)
+
     })
     .then(res => res.json())
     .then(data =>{
