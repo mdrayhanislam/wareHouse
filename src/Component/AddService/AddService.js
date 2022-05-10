@@ -1,9 +1,9 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 const AddService = () => {
     const { register, handleSubmit } = useForm();
-
+     const nagigate = useNavigate();
     const onSubmit = data => {
     console.log(data);
    const url =`https://lit-spire-37049.herokuapp.com/service`;
@@ -17,7 +17,7 @@ const AddService = () => {
    .then(res=> res.json())
    .then(result =>{
        console.log(result)
-       
+       nagigate('/manageitems')
    })
     };
     return (
