@@ -7,7 +7,7 @@ const ProductUpdate = () => {
   const [service, setService] = useState({});
 
   useEffect(() => {
-    const url = `http://localhost:5000/service/${serviceId}`
+    const url = `https://lit-spire-37049.herokuapp.com/service/${serviceId}`
     fetch(url)
       .then(res => res.json())
       .then(data => setService(data))
@@ -20,8 +20,10 @@ const ProductUpdate = () => {
 
     const updatedUser = {quantity};
 
+    
+
     // send data to the server
-    const url = `http://localhost:5000/service/${serviceId}`;
+    const url = `https://lit-spire-37049.herokuapp.com/service/${serviceId}`;
     fetch(url, {
         method: 'PUT',
         headers: {

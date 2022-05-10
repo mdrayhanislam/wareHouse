@@ -1,11 +1,12 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import { Link } from 'react-router-dom';
 const AddService = () => {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = data => {
     console.log(data);
-   const url =`http://localhost:5000/service`;
+   const url =`https://lit-spire-37049.herokuapp.com/service`;
    fetch(url, {
        method: 'POST',
        headers: {
@@ -32,7 +33,7 @@ const AddService = () => {
                 <input className='mt-2' placeholder='Stock' type="text" {...register("quantity")} />
                 <input className='mt-2 bg-primary text-white' type="submit" value="Add Product" />
             </form>
-
+            <p className='mt-3 d-flex justify-content-center'> <Link to="/manageitems" className='text-danger pe-auto text-decoration-none'> Delete Item </Link></p>
         </div>
     );
 };
