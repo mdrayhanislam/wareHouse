@@ -19,3 +19,7 @@ github Server Side link: https://github.com/ProgrammingHeroWC4/warehouse-managem
 . Clicking on the button will take the user to the inventory/:id route. This route will be a private/protected route. Please make sure that the private route redirects to the login page if the user is not logged in. After login, the user will be redirected to the page he/she wanted to go to. Also, after reloading the page of a private route, the user is not redirected to the login page.
 
 . ON the Manage Inventories page, there have a button named add new item. You can change the name of the button if you want. You will be taken to the add inventory item page by clicking on this button. There will be able to add a new inventory item. Feel free to use, react hook form or html5 form. On this page, you can put an input field to put an image url. (For simplicity, you can upload the image to imgbb or other images hosting website and then put the url on the input field)
+
+• This website has login system, you can’t go to protect page without login
+
+• While logged in, users can add products, delete products
